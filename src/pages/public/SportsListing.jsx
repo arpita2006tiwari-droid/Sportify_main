@@ -117,14 +117,8 @@ const SportsListing = () => {
                       </span>
                     )}
                   </div>
-                  <div className="mt-auto pt-4 border-t border-slate-100 flex items-center justify-between">
-                    <div>
-                      <span className="text-slate-500 text-xs uppercase tracking-wider font-semibold">Price / Hour</span>
-                      <div className="text-xl font-bold text-slate-900">
-                        ₹{venue.price}
-                      </div>
-                    </div>
-                    <Link to={`/venue/${venue.id}`} className="btn-primary">
+                  <div className="mt-auto pt-4 border-t border-slate-100 flex items-center justify-center">
+                    <Link to={`/venue/${venue.id}`} className="btn-primary px-10">
                       View Details
                     </Link>
                   </div>

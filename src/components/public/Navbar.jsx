@@ -31,7 +31,7 @@ const Navbar = () => {
             <div className="w-10 h-10 bg-gradient-to-br from-primary-600 to-accent-500 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-md group-hover:scale-105 transition-transform">
               S
             </div>
-            <span className={`text-2xl font-display font-bold ${scrolled || location.pathname !== '/' ? 'text-slate-900' : 'text-white drop-shadow-md'}`}>
+            <span className="text-2xl font-display font-bold text-slate-900">
               Sportify
             </span>
           </Link>
@@ -45,19 +45,19 @@ const Navbar = () => {
                 className={`font-medium transition-colors hover:text-primary-500 ${
                   location.pathname === link.path
                     ? 'text-primary-600'
-                    : scrolled || location.pathname !== '/' ? 'text-slate-600' : 'text-slate-100'
+                    : 'text-slate-600'
                 }`}
               >
                 {link.name}
               </Link>
             ))}
             <div className="flex items-center gap-4 pl-4 border-l border-slate-300/50">
-              <button className={`p-2 rounded-full hover:bg-black/5 transition-colors ${scrolled || location.pathname !== '/' ? 'text-slate-600' : 'text-white'}`}>
+              <button className="p-2 rounded-full hover:bg-black/5 transition-colors text-slate-600">
                 <Search size={20} />
               </button>
               <Link to="/login" className="btn-primary flex items-center gap-2">
                 <User size={18} />
-                <span>Login</span>
+                <span>Register for Demo</span>
               </Link>
             </div>
           </div>
@@ -66,7 +66,7 @@ const Navbar = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={`p-2 rounded-lg ${scrolled || location.pathname !== '/' ? 'text-slate-900' : 'text-white'}`}
+              className="p-2 rounded-lg text-slate-900"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -93,7 +93,7 @@ const Navbar = () => {
           ))}
           <div className="h-px bg-slate-100 my-2"></div>
           <Link to="/login" onClick={() => setIsOpen(false)} className="mx-4 btn-primary text-center">
-            Login
+            Register for Demo
           </Link>
         </div>
       )}

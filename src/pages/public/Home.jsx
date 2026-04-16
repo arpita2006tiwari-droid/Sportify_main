@@ -16,23 +16,28 @@ const Home = () => {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex flex-col justify-center overflow-hidden bg-[#FAFCF8] pt-20">
-        {/* Right Green Slanted Background */}
+      <section className="relative min-h-[90vh] flex flex-col justify-center overflow-hidden bg-[#FAFCF8] pt-6 lg:pt-20">
+        {/* Desktop Green Slanted Background */}
         <div 
-          className="absolute top-0 right-0 w-full lg:w-[45%] h-full bg-[#6A7B5A] z-0 opacity-20 lg:opacity-100" 
+          className="hidden lg:block absolute top-0 right-0 w-[45%] h-full bg-[#6A7B5A] z-0" 
           style={{ clipPath: 'polygon(15% 0, 100% 0, 100% 100%, 0 100%)' }}
+        ></div>
+        
+        {/* Mobile Green Slanted Background */}
+        <div 
+          className="block lg:hidden absolute bottom-0 left-0 w-full h-[55%] sm:h-[65%] bg-[#6A7B5A] z-0 opacity-80" 
+          style={{ clipPath: 'polygon(0 10%, 100% 0, 100% 100%, 0 100%)' }}
         ></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex flex-col lg:flex-row items-center justify-between py-12 lg:py-20">
           
           {/* Left Content */}
           <div className="w-full lg:w-1/2 pr-0 lg:pr-12 text-center lg:text-left mb-16 lg:mb-0 pt-10">
-            <h1 className="text-[3rem] sm:text-[4.5rem] lg:text-[5.5rem] font-display font-medium text-slate-900 leading-[1.1] mb-6 tracking-tight">
-              Experience<br/>
-              <span className="text-transparent inline-block" style={{ WebkitTextStroke: '1.5px #E46F59' }}>SPORTS</span>
-              <span className="text-slate-900 ml-3 lg:ml-4 inline-block">IN MUMBAI</span>
+            <h1 className="text-[3.5rem] sm:text-[5rem] lg:text-[6rem] font-display font-medium leading-[1.0] lg:leading-[1.1] mb-8 tracking-tight flex flex-col justify-center lg:justify-start items-center lg:items-start">
+              <span className="text-transparent w-full text-center lg:text-left" style={{ WebkitTextStroke: '2px #E46F59' }}>SPORTS</span>
+              <span className="text-[#0B1528] w-full text-center lg:text-left">IN MUMBAI</span>
             </h1>
-            <p className="text-slate-600 text-lg sm:text-xl md:text-2xl mb-12 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+            <p className="text-slate-600 text-[1.05rem] sm:text-xl lg:text-2xl mb-10 max-w-lg mx-auto lg:mx-0 leading-relaxed px-4 lg:px-0">
               Simple, accessible, and high-quality venues — everything you need for the perfect game with your friends.
             </p>
             
@@ -41,7 +46,7 @@ const Home = () => {
             </a>
 
             {/* Quick Search */}
-            <div className="max-w-md mx-auto lg:mx-0 bg-white p-2 rounded-2xl shadow-xl flex items-center border border-slate-100">
+            <div className="relative z-20 max-w-md mx-auto lg:mx-0 bg-white p-2 rounded-2xl shadow-xl flex items-center border border-slate-100 w-[95%] lg:w-full">
               <input 
                 type="text" 
                 placeholder="Search sports (e.g. Basketball)..."
@@ -57,8 +62,8 @@ const Home = () => {
           </div>
 
           {/* Right Hexagon Cluster */}
-          <div className="w-full lg:w-1/2 relative h-[400px] sm:h-[600px] flex items-center justify-center">
-            <div className="relative w-full h-full max-w-[500px] mx-auto scale-75 sm:scale-100">
+          <div className="w-full lg:w-1/2 relative h-[320px] sm:h-[450px] lg:h-[600px] flex items-center justify-center -mt-16 lg:mt-0 z-0 overflow-visible">
+            <div className="relative w-[500px] h-[660px] mx-auto scale-[0.55] sm:scale-75 lg:scale-100 origin-center lg:origin-center shrink-0">
               {/* Hexagon Path Definition */}
               <style>{`
                 .hex-clip { clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); }
@@ -166,14 +171,8 @@ const Home = () => {
                     <MapPin size={16} className="mr-1 shrink-0" />
                     <span className="line-clamp-1">{venue.location}</span>
                   </div>
-                  <div className="mt-auto pt-4 border-t border-slate-100 flex items-center justify-between">
-                    <div>
-                      <span className="text-slate-500 text-sm">Starting from</span>
-                      <div className="text-lg font-bold text-slate-900 flex items-center">
-                        ₹{venue.price} <span className="text-sm font-normal text-slate-500 ml-1">/ hr</span>
-                      </div>
-                    </div>
-                    <Link to={`/venue/${venue.id}`} className="btn-primary py-2 px-6">
+                  <div className="mt-auto pt-4 border-t border-slate-100 flex items-center justify-center">
+                    <Link to={`/venue/${venue.id}`} className="btn-primary py-2 px-10">
                       Book Now
                     </Link>
                   </div>

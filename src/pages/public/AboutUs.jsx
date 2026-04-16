@@ -28,7 +28,7 @@ const AboutUs = () => {
                 {/* Large Image */}
                 <div className="relative rounded-[2rem] overflow-hidden flex-1 sm:w-[60%] h-80 sm:h-[420px] group shadow-sm">
                   <img 
-                    src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&q=80&w=1200" 
+                    src="/images/felix-yu-Ii7adwWwNh4-unsplash.jpg" 
                     alt="Basketball Court" 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
@@ -57,7 +57,7 @@ const AboutUs = () => {
                   {/* Small Image */}
                   <div className="relative rounded-[2rem] overflow-hidden h-48 sm:h-56 group shadow-sm">
                     <img 
-                      src="https://images.unsplash.com/photo-1566241440091-ec10de8db2e1?auto=format&fit=crop&q=80&w=800" 
+                      src="/images/maria-budanova-pristavskaya-pJR5MpkKTM8-unsplash.jpg" 
                       alt="Gymnastics Center" 
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     />
@@ -77,14 +77,7 @@ const AboutUs = () => {
                     <p className="text-sm text-slate-500 leading-relaxed mb-6">
                       Discover your new favorite place – play, train, and compete.
                     </p>
-                    <div className="flex gap-3">
-                      <button className="w-12 h-12 rounded-full border border-slate-200 bg-white flex items-center justify-center text-slate-600 hover:bg-slate-50 transition-colors">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
-                      </button>
-                      <button className="w-12 h-12 rounded-full border border-slate-200 bg-white flex items-center justify-center text-slate-600 hover:bg-slate-50 transition-colors">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6"/></svg>
-                      </button>
-                    </div>
+
                   </div>
                 </div>
               </div>
@@ -105,7 +98,7 @@ const AboutUs = () => {
               {/* Image half */}
               <div className="w-full sm:w-1/2 h-64 sm:h-full relative overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&q=80&w=800" 
+                  src="/images/august-phlieger-CREqtqgBFcU-unsplash.jpg" 
                   alt="Basketball Court" 
                   className="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-700"
                 />
@@ -119,22 +112,15 @@ const AboutUs = () => {
                   Our professional courts are designed for both individual practice and group sessions.
                 </p>
                 
-                <div className="mt-auto flex justify-between items-end">
-                  <a href="/sports" className="inline-flex items-center gap-2 border border-white/30 text-white rounded-full px-5 py-2 text-sm hover:bg-white hover:text-black transition-colors group">
+                <div className="mt-auto flex flex-wrap items-center justify-between gap-4">
+                  <a href="/sports" className="inline-flex items-center gap-2 border border-white/30 text-white rounded-full px-6 py-2.5 text-sm hover:bg-white hover:text-black transition-colors group">
                     Book a court 
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
                   </a>
                   
                   <div className="flex items-center gap-4 text-white/50 text-sm">
-                    1/2
-                    <div className="flex gap-2">
-                      <button className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white/70 hover:bg-white/10 transition-colors">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
-                      </button>
-                      <button className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white/70 hover:bg-white/10 transition-colors">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6"/></svg>
-                      </button>
-                    </div>
+                    <span className="font-medium tracking-widest text-[10px] uppercase opacity-60">Session 1/2</span>
+
                   </div>
                 </div>
               </div>
@@ -148,14 +134,15 @@ const AboutUs = () => {
               
               <div className="flex flex-col sm:flex-row items-start gap-8 sm:gap-12 mt-auto">
                 {/* Overlapping small image */}
-                <div className="relative w-40 h-48 sm:w-48 sm:h-56 shrink-0 rounded-3xl overflow-hidden shadow-sm">
+                <div className="relative w-44 h-52 sm:w-56 sm:h-64 shrink-0 rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white">
                   <img 
-                    src="https://images.unsplash.com/photo-1519861531473-920026073fd6?auto=format&fit=crop&q=80&w=600" 
-                    alt="Sports equipment" 
+                    src="/images/jesse-orrico-mse1vdzZXjA-unsplash.jpg" 
+                    alt="Sports training" 
                     className="w-full h-full object-cover"
                   />
-                  <button className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-12 h-12 bg-slate-900 text-white rounded-full flex items-center justify-center shadow-lg hover:bg-slate-800 hover:scale-110 transition-all z-10">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+                  <div className="absolute inset-0 bg-black/10"></div>
+                  <button className="absolute -left-1 sm:left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-14 h-14 bg-slate-900 text-white rounded-full flex items-center justify-center shadow-2xl hover:bg-slate-800 hover:scale-110 transition-all z-10 border-4 border-white">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 5v14M5 12h14"/></svg>
                   </button>
                 </div>
                 

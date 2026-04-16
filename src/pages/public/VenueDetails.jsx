@@ -110,10 +110,7 @@ const VenueDetails = () => {
           <div className="lg:col-span-1">
             <div className="sticky top-24 bg-white p-6 rounded-3xl shadow-sm border border-slate-100">
               <h3 className="text-2xl font-bold text-slate-900 mb-2">Book a Slot</h3>
-              <div className="text-slate-500 mb-6 pb-6 border-b border-slate-100 flex items-end">
-                <span className="text-3xl font-bold text-slate-900 mr-1">₹{venue.price}</span>
-                <span className="mb-1">/ hour</span>
-              </div>
+              <div className="border-b border-slate-100 mb-6"></div>
 
               {/* Date Selection */}
               <div className="mb-6">
@@ -157,23 +154,7 @@ const VenueDetails = () => {
                 </div>
               </div>
 
-              {/* Price Summary */}
-              {selectedSlot && (
-                <div className="bg-slate-50 p-4 rounded-xl mb-6">
-                  <div className="flex justify-between text-sm mb-2 text-slate-600">
-                    <span>1 Hour Slot</span>
-                    <span>₹{venue.price}</span>
-                  </div>
-                  <div className="flex justify-between text-sm mb-3 pb-3 border-b border-slate-200 text-slate-600">
-                    <span>Convenience Fee</span>
-                    <span>₹50</span>
-                  </div>
-                  <div className="flex justify-between font-bold text-slate-900">
-                    <span>Total Amount</span>
-                    <span>₹{venue.price + 50}</span>
-                  </div>
-                </div>
-              )}
+
 
               <button 
                 onClick={handleBooking}
