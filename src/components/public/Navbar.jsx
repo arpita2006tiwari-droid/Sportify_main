@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Search, User } from 'lucide-react';
+import { Menu, X, User } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 const Navbar = () => {
@@ -56,9 +56,6 @@ const Navbar = () => {
               </Link>
             ))}
             <div className={`flex items-center gap-6 pl-8 border-l transition-colors duration-500 ${isDarkNav ? 'border-white/10' : 'border-navy-900/10'}`}>
-              <button className={`p-2 rounded-xl transition-all hover:scale-110 ${isDarkNav ? 'text-white/60 hover:text-white hover:bg-white/10' : 'text-navy-900/40 hover:text-navy-900 hover:bg-navy-900/5'}`}>
-                <Search size={22} className="stroke-[2.5]" />
-              </button>
               <Link to="/login" className="btn-primary flex items-center gap-2.5 text-xs font-black uppercase tracking-[0.2em] px-7 py-3 shadow-[0_10px_30px_-10px_rgba(37,99,235,0.5)]">
                 <User size={18} className="stroke-[3]" />
                 <span>Register</span>
