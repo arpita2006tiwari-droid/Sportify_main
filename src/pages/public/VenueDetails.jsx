@@ -33,11 +33,11 @@ const VenueDetails = () => {
   const dates = ['Today', 'Tomorrow', 'Day After'];
 
   return (
-    <div className="bg-premium-light min-h-screen">
+    <div className="bg-background min-h-screen transition-colors duration-500">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-40 pb-20">
         
         {/* Back navigation */}
-        <Link to="/sports" className="inline-flex items-center text-slate-400 hover:text-primary-600 mb-10 transition-colors font-bold uppercase tracking-widest text-xs">
+        <Link to="/sports" className="inline-flex items-center text-text-muted hover:text-primary-600 mb-10 transition-colors font-bold uppercase tracking-widest text-xs">
           <ChevronLeft size={16} className="mr-2" /> Back to listings
         </Link>
 
@@ -67,8 +67,8 @@ const VenueDetails = () => {
                     <CheckCircle size={14} className="mr-1.5 text-accent-500" /> Verified Arena
                   </span>
                 </div>
-                <h1 className="text-5xl lg:text-7xl font-display font-black text-navy-900 tracking-tighter leading-[1.1] mb-4">{venue.name}</h1>
-                <div className="flex items-center text-slate-500 text-xl font-medium">
+                <h1 className="text-5xl lg:text-7xl font-display font-black text-text-main tracking-tighter leading-[1.1] mb-4">{venue.name}</h1>
+                <div className="flex items-center text-text-secondary text-xl font-medium">
                   <MapPin size={24} className="mr-2 text-primary-500 shrink-0" />
                   <span>{venue.location}</span>
                 </div>

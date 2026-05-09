@@ -4,7 +4,7 @@ import Footer from './Footer';
 
 const PublicLayout = () => {
   return (
-    <div className="flex flex-col min-h-screen bg-premium-dark animate-fade-in">
+    <div className="flex flex-col min-h-screen bg-background animate-fade-in">
       <Navbar />
       <main className="flex-1">
         <Outlet />
